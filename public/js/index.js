@@ -17,10 +17,6 @@ const main = document.querySelector('#app');
 currentFunction = fizzbuzz;
 printKata(fizzbuzz);
 
-document.querySelector('#fizzbuzz').onclick = () => {
-  currentFunction = fizzbuzz;
-  document.querySelector('.container').classList.toggleClass('.fizzbuzz');
-
-}
+document.querySelector('#fizzbuzz').onclick = () => currentFunction = fizzbuzz;
 document.querySelector('#roman').onclick = () => currentFunction = roman;
 document.querySelector('#calculator').onclick = () => currentFunction = evaluate;
