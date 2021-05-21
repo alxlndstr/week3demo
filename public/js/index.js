@@ -28,6 +28,7 @@ fizzbuzzElement.onclick = () => {
   romanElement.style = nonClicked;
   calculatorElement.style = nonClicked;
   currentFunction = fizzbuzz;
+  result.innerHTML = '';
 }
 
 romanElement.onclick = () => {
@@ -35,6 +36,7 @@ romanElement.onclick = () => {
   romanElement.style = clicked;
   calculatorElement.style = nonClicked;
   currentFunction = roman;
+  result.innerHTML = '';
 }
 
 calculatorElement.onclick = () => {
@@ -42,6 +44,7 @@ calculatorElement.onclick = () => {
   romanElement.style = nonClicked;
   calculatorElement.style = clicked;
   currentFunction = calculate;
+  result.innerHTML = '';
 }
 const popup = document.querySelector('#popup');
 

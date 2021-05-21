@@ -16,7 +16,7 @@ const Numerals = [
 
 export function roman(number) {
   let num = number;
-  if (num < 1 || num > 3000 || /[^\d]/.test(num)) {
+  if (num < 1 || num > 3000 || /\D/.test(num)) {
     return 'Only accepts numbers between 1-3000';
   }
 
