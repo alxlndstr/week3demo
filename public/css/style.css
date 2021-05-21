@@ -39,7 +39,7 @@ body{
     margin-top: 108px;
 }
 
-.kata:focus{
+.kata-clicked{
     color: var(--lighter-grey);
     text-shadow: 5px 5px var(--cool-grey);
 }
