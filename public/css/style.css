@@ -9,11 +9,13 @@
     --lighter-shadows: #f8f8f8;
 }
 
+.title{
+    left: 0;
+}
 
 body{
     background-image: url('https://images.unsplash.com/photo-1621472124503-a760c1146f44?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80');
     background-size: cover;
-    font-family: monospace;
     color: var(--liberty);
     font-family: 'Ubuntu', sans-serif;
 }
@@ -22,6 +24,7 @@ body{
     flex-direction: column;
     margin: 15px;
     display: flex;
+    text-align: center;
 }
 
 .container{
@@ -36,12 +39,7 @@ body{
     margin: 45px;
     height: 92px;
     display: flex;
-    margin-top: 108px;
-}
-
-.kata-clicked{
-    color: var(--lighter-grey);
-    text-shadow: 5px 5px var(--cool-grey);
+    margin-top: 80px;
 }
 
 .kata{
@@ -85,7 +83,7 @@ body{
 }
 
 .snippet{
-    background: none;
+    background-color: var(--black-shadows);
 }
 
 #snippet{
@@ -94,20 +92,53 @@ body{
 }
 
 input[type="text" i]{
-    transition: width 5s ease-in;
     font-family: 'Nova Mono', monospace;
     font-size: 20px;
     font-weight: bold;
-    background-color: var(--lighter-shadows);
-    border: 3px solid var(--cool-grey);
+    background-color: var(--black-shadows);
+    opacity: 0.6;
     padding-left: 40px;
     height: 40px;
+    width: 400px;
     outline: none;
 }
 
+#popup {
+  background-color: var(--liberty);
+  font-family: 'Nova Mono', monospace;
+  font-size: 20px;
+  color: var(--black-shadows);
+  border: 3px solid var(--black-shadows);
+  position: fixed;
+  width: 80%;
+  height: 500px;
+  left: 10%;
+  top: 100px;
+  z-index: 999;
+}
+
+
+#closeSnippet {
+  float: right;
+  background-color: var(--lighter-grey);
+  color:  var(--black-shadows);
+  text-decoration: none;
+  text-align: center;
+  border-left: 3px solid var(--black-shadows);
+  border-bottom: 3px solid var(--black-shadows);
+  border-top: none;
+  border-right: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.hidden{
+    display: none;
+}
 input[type="text" i]:focus{
-    background-color: var(--black-shadows);
     opacity: 0.8;
-    border: 2px solid var(--liberty);
-    width: 400px;
+    border: 3px solid var(--liberty);
 }

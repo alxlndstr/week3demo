@@ -1,4 +1,4 @@
-import { evaluate } from './calculator.js';
+import { calculate } from './calculator.js';
 import { fizzbuzz } from './fizzbuzz.js';
 import { roman } from './romans.js';
 
@@ -36,9 +36,22 @@ romanElement.onclick = () => {
   calculatorElement.style = nonClicked;
   currentFunction = roman;
 }
+
 calculatorElement.onclick = () => {
   fizzbuzzElement.style = nonClicked;
   romanElement.style = nonClicked;
   calculatorElement.style = clicked;
-  currentFunction = evaluate;
+  currentFunction = calculate;
 }
+const popup = document.querySelector('#popup');
+
+const snippetButton = document.querySelector('.snippet');
+const closeSnippet = document.querySelector('#closeSnippet');
+
+snippetButton.onclick = () => {
+  popup.classList.remove('hidden');
+};
+
+closeSnippet.onclick = () => {
+  popup.classList.add('hidden');
+};

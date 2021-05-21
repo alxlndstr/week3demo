@@ -2,9 +2,11 @@
 <head>
   <script src="https://kit.fontawesome.com/405e6f304c.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css" />
+  <title>Mob Undefined Demo</title>
 </head>
 <body>
   <div class="everything">
+    <div class="title"><h1>Mob Undefined</h1></div>
     <div class="container">
       <div class="katas">
         <button class="kata button" id="roman">
@@ -27,5 +29,32 @@
       </button>
     </div>
   </div>
+  <div style="position:relative;">
+    <div id="popup" class="hidden popups">
+      <button id="closeSnippet">X</button>
+      <div id="romanTable" class = "codeblock">
+        <pre>
+          <code>
+      const Numerals = [
+    0    ['1000', 'M'],             while (num > 0) { 
+    1    ['900', 'CM'],               for (let i = 0; i < Numerals.length; i++) {
+    2    ['500', 'D'],                  if (num >= +Numerals[i][0]) { 
+    3    ['400', 'CD'],                   num -= +Numerals[i][0];
+    4    ['100', 'C'],                    str += Numerals[i][1];
+    5    ['90', 'XC'],                    break;
+    6    ['50', 'L'],                   }                    
+    7    ['40', 'XL'],                }
+    8    ['10', 'X'],               }
+    9    ['9', 'IX'],
+   10    ['5', 'V'],
+   11    ['4', 'IV'],
+   12    ['1', 'I'],
+      ]
+          </code>
+        </pre>
+      </div>
+    </div>
+  </div>
+  <script src="/js/sweetalert.min.js"></script>
   <script type="module" src="js/index.js"> </script>
 </body>
