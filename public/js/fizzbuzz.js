@@ -8,7 +8,7 @@ export function fizzbuzz(number) {
     return 'Please provide a number'
   }
 
-  if(num <= 1 || num > 100) {
+  if(num < 1 || num > 100) {
       return 'please provide a number between 1-100';
   }
   
